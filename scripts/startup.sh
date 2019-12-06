@@ -1,2 +1,2 @@
 #!/bin/bash
-php /src/zero-dusk dusk
+php /src/artisan dusk

@@ -20,6 +20,6 @@ RUN cd /src;\
 ADD / /src
 
 
-RUN php /src/zero-dusk dusk:update 76
-RUN chmod 777 /src/docker/startup.sh
-CMD ["/src/docker/startup.sh"]
+RUN php /src/artisan dusk:update 76
+RUN chmod +x /src/scripts/startup.sh
+CMD ["/src/scripts/startup.sh"]
