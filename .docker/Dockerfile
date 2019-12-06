@@ -14,11 +14,12 @@ ADD /composer.json /src/
 ADD /composer.lock /src/
 ADD /database /src/database
 
+RUN composer global require hirak/prestissimo
+
 RUN cd /src;\
  composer install --ignore-platform-reqs --no-scripts
 
 ADD / /src
-
 
 RUN php /src/artisan dusk:update 76
 RUN chmod +x /src/scripts/startup.sh
